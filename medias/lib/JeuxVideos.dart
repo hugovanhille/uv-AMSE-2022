@@ -10,13 +10,20 @@ class JeuxVideosPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffF8C4F1),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Jeu1,
-            Jeu2,
-            Jeu3,
-            Jeu4,
-          ],
+        child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(begin: Alignment.topCenter, colors: [
+            Colors.white,
+            Colors.pink.shade300,
+          ])),
+          child: Column(
+            children: [
+              Jeu1,
+              Jeu2,
+              Jeu3,
+              Jeu4,
+            ],
+          ),
         ),
       ),
     );

@@ -10,13 +10,20 @@ class FilmsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffF7D1C9),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Film1,
-            Film2,
-            Film3,
-            Film4,
-          ],
+        child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(begin: Alignment.topCenter, colors: [
+            Colors.white,
+            Colors.green.shade300,
+          ])),
+          child: Column(
+            children: [
+              Film1,
+              Film2,
+              Film3,
+              Film4,
+            ],
+          ),
         ),
       ),
     );

@@ -25,6 +25,7 @@ class _ButtonInfoState extends State<ButtonInfo> {
             '$texteButton d\'infos',
             style: TextStyle(
               fontSize: 10,
+              color: Colors.blue.shade800,
             ),
           ),
           onPressed: () {

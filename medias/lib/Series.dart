@@ -10,13 +10,20 @@ class SeriesPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffD0F8C4),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Serie1,
-            Serie2,
-            Serie3,
-            Serie4,
-          ],
+        child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(begin: Alignment.topCenter, colors: [
+            Colors.white,
+            Colors.purple.shade300,
+          ])),
+          child: Column(
+            children: [
+              Serie1,
+              Serie2,
+              Serie3,
+              Serie4,
+            ],
+          ),
         ),
       ),
     );
