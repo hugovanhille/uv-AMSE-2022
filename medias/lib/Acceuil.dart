@@ -16,7 +16,9 @@ class AcceuilPage extends StatelessWidget {
           ),
           const Text(
             'Vous pouvez naviguer entre les différentes pages Films Séries et Jeux Vidéos et retrouver vos favoris dans la page Favoris.',
-            style: TextStyle(fontSize: 15),
+            style: TextStyle(
+              fontSize: 15,
+            ),
           ),
         ],
       ),

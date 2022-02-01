@@ -13,3 +13,33 @@ class FavorisPage extends StatelessWidget {
     );
   }
 }
+
+class ButtonFav extends StatefulWidget {
+  const ButtonFav({Key? key}) : super(key: key);
+  @override
+  _ButtonFavState createState() => _ButtonFavState();
+}
+
+class _ButtonFavState extends State<ButtonFav> {
+  var couleur;
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      icon: Icon(
+        Icons.favorite,
+        size: 20,
+        color: couleur,
+      ),
+      tooltip: "Favoris",
+      onPressed: () {
+        setState(() {
+          if (couleur == Colors.black) {
+            couleur = Colors.red;
+          } else {
+            couleur = Colors.black;
+          }
+        });
+      },
+    );
+  }
+}
