@@ -1,9 +1,9 @@
 # uv-AMSE-2022
 
-Ce répertoire git rassempble le travail réalisé dans le cadre de l'uv AMSE enseigné à l'IMT Lille Douai.
+Ce répertoire git rassemble le travail réalisé dans le cadre de l'uv AMSE enseigné à l'IMT Lille Douai.
 
 ## Application Medias
-Dans le répertoire Medias se trouve l'ensmble des fichiers permettant de gérer une application de gestion de médias.
+Dans le répertoire Medias se trouve l'ensemble des fichiers permettant de gérer une application de gestion de médias.
 
 Celle-ci est composé d'un fichier [main](https://github.com/hugovanhille/uv-AMSE-2022/blob/main/medias/lib/main.dart) qui permet de faire le liens entre les différentes pages de l'application listées ci-dessous:
 
