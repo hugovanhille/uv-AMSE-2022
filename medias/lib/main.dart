@@ -4,6 +4,7 @@ import 'package:medias/Acceuil.dart';
 import 'package:medias/Films.dart';
 import 'package:medias/Series.dart';
 import 'package:medias/JeuxVideos.dart';
+import 'package:medias/A_Propos.dart';
 
 void main() => runApp(const MyApp());
 
@@ -30,14 +31,12 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
-  // static const TextStyle optionStyle =
-  //     TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
     AcceuilPage(),
     FilmsPage(),
     SeriesPage(),
     JeuxVideosPage(),
-    FavorisPage(),
+    AProposPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -79,8 +78,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             backgroundColor: Colors.pink,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Favoris',
+            icon: Icon(Icons.announcement_sharp),
+            label: 'A Propos',
             backgroundColor: Colors.amber,
           ),
         ],

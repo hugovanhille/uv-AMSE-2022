@@ -1,27 +1,43 @@
 import 'package:flutter/material.dart';
+import 'dart:core';
 
-class FavorisPage extends StatelessWidget {
-  const FavorisPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(10.0),
-      color: Colors.amber[600],
-      width: 48.0,
-      height: 48.0,
-    );
-  }
-}
+List<bool> listFav = [
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false
+];
 
 class ButtonFav extends StatefulWidget {
-  const ButtonFav({Key? key}) : super(key: key);
+  const ButtonFav(this.titre, {Key? key}) : super(key: key);
+  final int titre;
+
   @override
-  _ButtonFavState createState() => _ButtonFavState();
+  _ButtonFavState createState() => _ButtonFavState(titre);
 }
 
 class _ButtonFavState extends State<ButtonFav> {
+  _ButtonFavState(this.titre);
+  final titre;
   var couleur;
+  @override
+  void initState() {
+    super.initState();
+    if (listFav[titre] == true) {
+      couleur = Colors.redAccent.shade700;
+    } else {
+      couleur = Colors.black26;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return IconButton(
@@ -33,10 +49,12 @@ class _ButtonFavState extends State<ButtonFav> {
       tooltip: "Favoris",
       onPressed: () {
         setState(() {
-          if (couleur == Colors.black) {
-            couleur = Colors.red;
+          if (couleur == Colors.black26) {
+            couleur = Colors.redAccent.shade700;
+            listFav[titre] = true;
           } else {
-            couleur = Colors.black;
+            couleur = Colors.black26;
+            listFav[titre] = false;
           }
         });
       },

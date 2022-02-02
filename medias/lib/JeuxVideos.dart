@@ -49,7 +49,7 @@ class JeuxVideosPage extends StatelessWidget {
           height: 300,
           width: 200,
         ),
-        const ButtonFav(),
+        const ButtonFav(9),
       ],
     ),
   );
@@ -74,7 +74,7 @@ class JeuxVideosPage extends StatelessWidget {
           height: 300,
           width: 200,
         ),
-        const ButtonFav(),
+        const ButtonFav(10),
       ],
     ),
   );
@@ -99,7 +99,7 @@ class JeuxVideosPage extends StatelessWidget {
           height: 300,
           width: 200,
         ),
-        const ButtonFav(),
+        const ButtonFav(11),
       ],
     ),
   );
@@ -124,7 +124,7 @@ class JeuxVideosPage extends StatelessWidget {
           height: 300,
           width: 200,
         ),
-        const ButtonFav(),
+        const ButtonFav(0),
       ],
     ),
   );

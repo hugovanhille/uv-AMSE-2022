@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AcceuilPage extends StatelessWidget {
@@ -18,12 +17,12 @@ class AcceuilPage extends StatelessWidget {
         children: [
           const Text(
             'Bienvenue sur votre application de médias !',
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
           ),
           const Text(
-            'Vous pouvez naviguer entre les différentes pages Films Séries et Jeux Vidéos et retrouver vos favoris dans la page Favoris.',
+            'Vous pouvez naviguer entre les différentes pages Films, Séries et Jeux Vidéos pour découvrir du contenu de divertissement qui vous intéresse. Si vous souhaitez plus d\'informations sur un média, cliquez sur le bouton plus d\'informations. Si un média vous plait vous avez la possibilité de l\'enregistrer dans vos favoris n cliquant sur l\'icone en forme de coeur.',
             style: TextStyle(
-              fontSize: 15,
+              fontSize: 20,
             ),
           ),
         ],

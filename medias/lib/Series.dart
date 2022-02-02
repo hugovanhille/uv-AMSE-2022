@@ -30,7 +30,6 @@ class SeriesPage extends StatelessWidget {
   }
 
   Widget Serie1 = Container(
-    //padding: EdgeInsets.all(3),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -49,13 +48,12 @@ class SeriesPage extends StatelessWidget {
           height: 300,
           width: 200,
         ),
-        ButtonFav(),
+        const ButtonFav(5),
       ],
     ),
   );
 
   Widget Serie2 = Container(
-    //padding: EdgeInsets.all(3),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -74,13 +72,12 @@ class SeriesPage extends StatelessWidget {
           height: 300,
           width: 200,
         ),
-        ButtonFav(),
+        const ButtonFav(6),
       ],
     ),
   );
 
   Widget Serie3 = Container(
-    //padding: EdgeInsets.all(3),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -99,13 +96,12 @@ class SeriesPage extends StatelessWidget {
           height: 300,
           width: 200,
         ),
-        ButtonFav(),
+        const ButtonFav(7),
       ],
     ),
   );
 
   Widget Serie4 = Container(
-    //padding: EdgeInsets.all(3),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -124,7 +120,7 @@ class SeriesPage extends StatelessWidget {
           height: 300,
           width: 200,
         ),
-        ButtonFav(),
+        const ButtonFav(8),
       ],
     ),
   );

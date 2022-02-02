@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:medias/Favoris.dart';
 import 'package:medias/Infos.dart';
@@ -30,7 +28,6 @@ class FilmsPage extends StatelessWidget {
   }
 
   Widget Film1 = Container(
-    //padding: EdgeInsets.all(3),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -49,13 +46,12 @@ class FilmsPage extends StatelessWidget {
           height: 300,
           width: 200,
         ),
-        ButtonFav(),
+        const ButtonFav(1),
       ],
     ),
   );
 
   Widget Film2 = Container(
-    //padding: EdgeInsets.all(3),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -74,13 +70,12 @@ class FilmsPage extends StatelessWidget {
           height: 300,
           width: 200,
         ),
-        ButtonFav(),
+        const ButtonFav(2),
       ],
     ),
   );
 
   Widget Film3 = Container(
-    //padding: EdgeInsets.all(3),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
@@ -99,13 +94,12 @@ class FilmsPage extends StatelessWidget {
           height: 300,
           width: 200,
         ),
-        ButtonFav(),
+        const ButtonFav(3),
       ],
     ),
   );
 
   Widget Film4 = Container(
-    //padding: EdgeInsets.all(3),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
@@ -124,7 +118,7 @@ class FilmsPage extends StatelessWidget {
           height: 300,
           width: 200,
         ),
-        ButtonFav(),
+        const ButtonFav(4),
       ],
     ),
   );
