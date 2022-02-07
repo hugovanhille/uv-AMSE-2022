@@ -20,7 +20,7 @@ class AcceuilPage extends StatelessWidget {
             style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
           ),
           const Text(
-            'Vous pouvez naviguer entre les différentes pages Films, Séries et Jeux Vidéos pour découvrir du contenu de divertissement qui vous intéresse. Si vous souhaitez plus d\'informations sur un média, cliquez sur le bouton plus d\'informations. Si un média vous plait vous avez la possibilité de l\'enregistrer dans vos favoris n cliquant sur l\'icone en forme de coeur.',
+            'Vous pouvez naviguer entre les différentes pages Films, Séries et Jeux Vidéos pour découvrir du contenu de divertissement qui vous intéresse. Si vous souhaitez plus d\'informations sur un média, cliquez sur le bouton plus d\'informations. Si un média vous plait vous avez la possibilité de l\'enregistrer dans vos favoris en cliquant sur l\'icone en forme de coeur.',
             style: TextStyle(
               fontSize: 20,
             ),
