@@ -15,14 +15,7 @@ class MyApp extends StatelessWidget {
         body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              //const Image(
-              //  image: NetworkImage('https://picsum.photos/512/1024'),
-              //),
-              Image.network(
-                'https://picsum.photos/512/1024',
-                width: 300,
-                height: 500,
-              ),
+              const image(),
               Row(children: <Widget>[
                 const Text(
                   '   RotateX:',
@@ -100,6 +93,35 @@ class _buttonState extends State<button> {
         setState(() {});
       },
       icon: const Icon(Icons.crop_square),
+    );
+  }
+}
+
+class image extends StatefulWidget {
+  const image({Key? key}) : super(key: key);
+
+  @override
+  _imageState createState() => _imageState();
+}
+
+class _imageState extends State<image> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Transform(
+        transform: Matrix4.rotationZ(3.14 / 9),
+        child: Transform.rotate(
+          angle: 10,
+          child: Transform.scale(
+            scale: 0.8,
+            child: Image.network(
+              'https://picsum.photos/512/1024',
+              width: 300,
+              height: 500,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
