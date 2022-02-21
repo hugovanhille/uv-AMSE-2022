@@ -13,8 +13,15 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  double rotateX = val_slider[0];
+  double rotatey = val_slider[1];
+  double scale = val_slider[2];
+
   @override
   Widget build(BuildContext context) {
+    rotateX = val_slider[0];
+    rotatey = val_slider[1];
+    scale = val_slider[2];
     return MaterialApp(
       home: Scaffold(
         body: Column(
@@ -22,21 +29,17 @@ class _MyAppState extends State<MyApp> {
             children: <Widget>[
               Transform(
                 alignment: Alignment.center,
-                transform: Matrix4.rotationX(
-                  val_slider[0],
-                )
-                  ..rotateY(
-                    val_slider[1],
-                  )
-                  ..scale(
-                    val_slider[2] / 100,
-                  ),
+                transform: Matrix4.rotationX(rotateX)
+                  ..rotateY(rotatey)
+                  ..scale(scale / 100),
                 child: Image.network(
                   'https://picsum.photos/512/1024',
                   width: 300,
                   height: 500,
                 ),
               ),
+
+              //---------Création des Sliders------
               Row(children: <Widget>[
                 const Text(
                   '   RotateX:',
