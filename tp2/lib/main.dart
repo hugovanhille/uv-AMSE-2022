@@ -5,10 +5,14 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,7 +20,23 @@ class MyApp extends StatelessWidget {
         body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const image(),
+              Transform(
+                alignment: Alignment.center,
+                transform: Matrix4.rotationX(
+                  val_slider[0],
+                )
+                  ..rotateY(
+                    val_slider[1],
+                  )
+                  ..scale(
+                    val_slider[2] / 100,
+                  ),
+                child: Image.network(
+                  'https://picsum.photos/512/1024',
+                  width: 300,
+                  height: 500,
+                ),
+              ),
               Row(children: <Widget>[
                 const Text(
                   '   RotateX:',
@@ -81,9 +101,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       onChanged: (double value) {
         setState(() {
           valeur = value;
-          val_slider[indice] = valeur;
-          debugPrint(val_slider[indice].toString());
+          //const image();
+
+          debugPrint(val_slider[0].toString());
         });
+        val_slider[indice] = valeur;
       },
     );
   }
@@ -107,7 +129,7 @@ class _buttonState extends State<button> {
     );
   }
 }
-
+/*
 class image extends StatefulWidget {
   const image({Key? key}) : super(key: key);
 
@@ -116,24 +138,20 @@ class image extends StatefulWidget {
 }
 
 class _imageState extends State<image> {
-  var valRotationX;
-  var valRotationY;
-  var valScale;
-
   @override
-  void initState() {
-    super.initState();
-    setState(() {
-      valRotationX = val_slider[0];
-      valRotationY = val_slider[1];
-      valScale = val_slider[2];
-    });
-  }
-
-  Widget rotation() {
+  Widget build(BuildContext context) {
     return Container(
-      child: Transform.rotate(
-        angle: val_slider[0] * 360 / 100,
+      child: Transform(
+        alignment: Alignment.center,
+        transform: Matrix4.rotationX(
+          val_slider[0],
+        )
+          ..rotateY(
+            val_slider[1],
+          )
+          ..scale(
+            val_slider[2] / 100,
+          ),
         child: Image.network(
           'https://picsum.photos/512/1024',
           width: 300,
@@ -142,14 +160,4 @@ class _imageState extends State<image> {
       ),
     );
   }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        child: Column(
-      children: <Widget>[
-        rotation(),
-      ],
-    ));
-  }
-}
+}*/
